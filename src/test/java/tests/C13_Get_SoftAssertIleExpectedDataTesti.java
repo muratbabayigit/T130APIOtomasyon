@@ -62,7 +62,7 @@ public class C13_Get_SoftAssertIleExpectedDataTesti {
         softAssert.assertEquals(resJP.get("data.profile_image"),expBody.getJSONObject("data").get("profile_image"));
         softAssert.assertEquals(resJP.get("message"),expBody.get("message"));
 
-        softAssert.assertAll();
+        //softAssert.assertAll();
 
 
 

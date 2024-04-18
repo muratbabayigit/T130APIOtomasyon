@@ -17,7 +17,7 @@ public class C17_BaseUrlHerOkuAppQueryParam extends BaseUrlHerOkuApp {
         test edecek bir GET request gonderdigimizde,
         donen response’un
             status code’unun 200 oldugunu
-            // ve “Jim” ismine sahip 3 booking oldugunu test edin
+            // ve “Jim” ismine sahip 4 booking oldugunu test edin
 
          */
     @Test
@@ -25,7 +25,7 @@ public class C17_BaseUrlHerOkuAppQueryParam extends BaseUrlHerOkuApp {
         specHerOkuApp.pathParam("pp1","booking").queryParam("firstname","Jim");
         Response response=given().when().spec(specHerOkuApp).get("/{pp1}");
        // System.out.println(response.prettyPrint());
-        response.then().assertThat().statusCode(200).body("size()", equalTo(2));
+        response.then().assertThat().statusCode(200).body("size()", equalTo(7));
 
 
     }

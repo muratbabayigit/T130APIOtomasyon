@@ -36,11 +36,11 @@ gonderdigimizde donen Response'un,
         //Assertion İşlemi(Bu test için manuel yapmamız istenmiş)
 
         //System.out.println(response.prettyPrint());
-        System.out.println("Status Code: "+response.getStatusCode()); //200
-        System.out.println("Content Type: "+response.getContentType()); //application/json; charset=utf-8
-        System.out.println("Server: "+response.getHeader("Server")); //Cowboy
-        System.out.println("Status Line: "+response.getStatusLine());//HTTP/1.1 200 OK
-        System.out.println("Test time: "+response.getTime()+" ms"); // testTime<5s
+      // System.out.println("Status Code: "+response.getStatusCode()); //200
+      // System.out.println("Content Type: "+response.getContentType()); //application/json; charset=utf-8
+      // System.out.println("Server: "+response.getHeader("Server")); //Cowboy
+      // System.out.println("Status Line: "+response.getStatusLine());//HTTP/1.1 200 OK
+      // System.out.println("Test time: "+response.getTime()+" ms"); // testTime<5s
 
 
 
