@@ -35,7 +35,7 @@ public class JsonPlaceData {
             return expData;
        }
 
-        public static JSONObject expDataOlusturDinamik(int userId, int id,String title,String body){
+        public static JSONObject JsonDataOlustur(int userId, int id,String title,String body){
         JSONObject expData=new JSONObject();
         expData.put("userId",userId);
         expData.put("id",id);

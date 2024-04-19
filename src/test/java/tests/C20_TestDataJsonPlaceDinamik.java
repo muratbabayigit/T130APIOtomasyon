@@ -34,7 +34,7 @@ public class C20_TestDataJsonPlaceDinamik extends BaseUrlJsonPlaceHolder {
         specJsonPlaceHolder.pathParams("pp1","posts","pp2","65");
 
         //2-ExpBody oluştur
-        JSONObject expBody= JsonPlaceData.expDataOlusturDinamik(7,65,"consequatur id enim sunt et et","voluptatibus ex esse\nsint explicabo est aliquid cumque adipisci fuga repellat labore\nmolestiae corrupti ex saepe at asperiores et perferendis\nnatus id esse incidunt pariatur");
+        JSONObject expBody= JsonPlaceData.JsonDataOlustur(7,65,"consequatur id enim sunt et et","voluptatibus ex esse\nsint explicabo est aliquid cumque adipisci fuga repellat labore\nmolestiae corrupti ex saepe at asperiores et perferendis\nnatus id esse incidunt pariatur");
 
          //3-
         Response response=given().when().spec(specJsonPlaceHolder).get("/{pp1}/{pp2}");
