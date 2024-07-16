@@ -10,6 +10,23 @@ import testDatas.HerOkuAppData;
 
 import static io.restassured.RestAssured.given;
 
+/*
+    https://restful-booker.herokuapp.com/booking/3324 (id güncellenmeli)
+    adresindeki rezervasyon bilgilerini
+        -H 'Content-Type: application/json' \
+        -H 'Accept: application/json' \
+        -H 'Cookie: token=abc123' \ veya -H 'Authorization:Basic YWRtaW46cGFzc3dvcmQxMjM=' \
+        header değerleriyle PUT request göndererek update ediniz.
+        Token Oluşturma
+        Content-Type: application/json header derğeriyle aşağıdaki body ile
+        {
+                "username" : "admin",
+                "password" : "password123"
+        }
+        Post Request yapınız
+
+ */
+
 public class P30_TokenKullanma extends BaseUrlHerOkuApp {
 
   static String token;
