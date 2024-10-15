@@ -12,7 +12,9 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
 public class C27_PojoClassPUT extends BaseUrlJsonPlaceHolder {
+
     /*
+     C27_PojoClassPUT
     https://jsonplaceholder.typicode.com/posts/70 url'ine
     asagidaki body'e sahip bir PUT request yolladigimizda
     donen response'in

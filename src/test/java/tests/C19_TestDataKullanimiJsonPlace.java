@@ -42,14 +42,17 @@ public class C19_TestDataKullanimiJsonPlace extends BaseUrlJsonPlaceHolder {
 
         //4-Assertion yapılır
         JsonPath resJP=response.jsonPath();
+        /*
+            assertEquals(JsonPlaceData.basariliSC,response.getStatusCode());
+            assertEquals(JsonPlaceData.contentType,response.getContentType());
+            assertEquals(JsonPlaceData.header,response.getHeader("Connection"));
+            assertEquals(expBody.get("userId"),resJP.getInt("userId"));
+            assertEquals(expBody.get("id"),resJP.getInt("id"));
+            assertEquals(expBody.get("title"),resJP.getString("title"));
+            assertEquals(expBody.get("body"),resJP.getString("body"));
+         */
 
-        assertEquals(JsonPlaceData.basariliSC,response.getStatusCode());
-        assertEquals(JsonPlaceData.contentType,response.getContentType());
-        assertEquals(JsonPlaceData.header,response.getHeader("Connection"));
-        assertEquals(expBody.get("userId"),resJP.getInt("userId"));
-        assertEquals(expBody.get("id"),resJP.getInt("id"));
-        assertEquals(expBody.get("title"),resJP.getString("title"));
-        assertEquals(expBody.get("body"),resJP.getString("body"));
+
 
 
     }

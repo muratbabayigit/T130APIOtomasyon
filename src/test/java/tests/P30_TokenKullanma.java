@@ -11,13 +11,14 @@ import testDatas.HerOkuAppData;
 import static io.restassured.RestAssured.given;
 
 /*
-    https://restful-booker.herokuapp.com/booking/3324 (id güncellenmeli)
+    https://restful-booker.herokuapp.com/booking/2130 (id güncellenmeli)
     adresindeki rezervasyon bilgilerini
         -H 'Content-Type: application/json' \
         -H 'Accept: application/json' \
         -H 'Cookie: token=abc123' \ veya -H 'Authorization:Basic YWRtaW46cGFzc3dvcmQxMjM=' \
         header değerleriyle PUT request göndererek update ediniz.
         Token Oluşturma
+        https://restful-booker.herokuapp.com/auth
         Content-Type: application/json header derğeriyle aşağıdaki body ile
         {
                 "username" : "admin",
@@ -50,8 +51,8 @@ public class P30_TokenKullanma extends BaseUrlHerOkuApp {
     }
 
     @Test
-    public void tokenTest2(){
-        specHerOkuApp.pathParams("pp1","booking","pp2","3946");
+    public void tokenTest(){
+        specHerOkuApp.pathParams("pp1","booking","pp2","4004");
         JSONObject reqBody= HerOkuAppData.reqBodyOlustur();
         Response response=given().contentType(ContentType.JSON)
                 .when().spec(specHerOkuApp)
@@ -59,6 +60,21 @@ public class P30_TokenKullanma extends BaseUrlHerOkuApp {
                 .header("Content-Type","application/json")
                 .header("Accept", "application/json")
                 .header("Cookie","token="+token)
+                .put("/{pp1}/{pp2}");
+
+        response.prettyPrint();
+    }
+
+    @Test
+    public void tokenTest2(){
+        specHerOkuApp.pathParams("pp1","booking","pp2","4145");
+        JSONObject reqBody= HerOkuAppData.reqBodyOlustur();
+        Response response=given().contentType(ContentType.JSON)
+                .when().spec(specHerOkuApp)
+                .body(reqBody.toString())
+                .header("Content-Type","application/json")
+                .header("Accept", "application/json")
+                .header("Authorization","Basic YWRtaW46cGFzc3dvcmQxMjM=")
                 .put("/{pp1}/{pp2}");
 
         response.prettyPrint();
